@@ -1,0 +1,172 @@
+/* Your existing CSS styles for header, fonts, etc. */
+
+/* Login Page Styles */
+.login {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.login-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.signup-link {
+    margin-top: 20px;
+}
+
+.signup-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Header Styles */
+header {
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    position: fixed;
+    background: var(--bg-color);
+    box-shadow: 0 2px 18px rgba(129, 162, 182, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 8%;
+    transition: .3s;
+}
+
+.logo {
+    color: var(--text-color);
+    font-size: var(--main-font);
+    font-weight: 600;
+    line-height: 0.8;
+    text-decoration: none;
+}
+
+#menu-icon {
+    font-size: 32px;
+    color: var(--text-color);
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    font-size: var(--p-font);
+    color: var(--text-color);
+    font-weight: 600;
+    padding: 10px 15px;
+    margin: 0 10px;
+    transition: all .40s ease;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background: var(--text-color);
+    color: #fff;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons i {
+    color: var(--text-color);
+    font-size: 24px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.icons i:hover {
+    opacity: 0.7;
+}
+
+.login {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust shadow values as needed */
+    border-radius: 10px; /* Optional: Add border radius for rounded corners */
+}
+
+
+/* Responsive Header */
+@media (max-width: 800px) {
+    header {
+        padding: 15px 8%;
+    }
+    
+    .logo {
+        font-size: calc(var(--main-font) - 5px);
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--bg-color);
+        box-shadow: 0 2px 18px rgba(129, 162, 182, 0.2);
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 10px 0;
+        margin: 0;
+    }
+}
